@@ -1,12 +1,15 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === "production";
+const repoName = "Sim-Senhorita-Studio-de-Beleza";
+
 const nextConfig: NextConfig = {
-  /* config options here */
-  experimental: {
-    agentFeedback: true,
+  output: "export",
+  basePath: isProd ? `/${repoName}` : "",
+  assetPrefix: isProd ? `/${repoName}/` : "",
+  images: {
+    unoptimized: true,
   },
-  cacheComponents: true,
-  partialPrefetching: true,
   turbopack: {
     rules: {
       "*.css": {
