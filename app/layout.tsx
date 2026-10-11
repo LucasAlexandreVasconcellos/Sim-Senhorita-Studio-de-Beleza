@@ -14,7 +14,11 @@ const montserrat = Montserrat({
   weight: ["400", "500", "600", "700"],
 });
 
+const SITE_URL =
+  "https://lucasalexandrevasconcellos.github.io/Sim-Senhorita-Studio-de-Beleza";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Sim Senhorita Studio de Beleza | Salão de Cabelo em Águas Claras - DF",
   description:
     "Coloração, cortes, tratamentos capilares, unhas, sobrancelhas e maquiagem no Sim Senhorita Studio de Beleza — Bahamas Center, Águas Claras, Brasília. Agende seu horário.",
@@ -27,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sim Senhorita Studio de Beleza",
     description: "Desperte a sua beleza natural em Águas Claras - DF.",
-    images: ["/hero-light.jpg"],
+    images: [`${SITE_URL}/hero-light.jpg`],
     locale: "pt_BR",
     type: "website",
   },

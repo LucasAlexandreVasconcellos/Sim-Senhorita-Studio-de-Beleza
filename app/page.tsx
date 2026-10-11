@@ -22,6 +22,9 @@ import {
   WHATSAPP_URL,
 } from "./data";
 
+import heroLight from "../public/hero-light.jpg";
+import heroDark from "../public/hero-dark.jpg";
+
 const d = (delay: string) => ({ "--d": delay }) as CSSProperties;
 
 
@@ -41,7 +44,7 @@ export default function Home() {
         <section id="inicio" className="hero" aria-labelledby="hero-title">
           <div className="hero-media" aria-hidden="true">
             <Image
-              src="/hero-light.jpg"
+              src={heroLight}
               alt=""
               fill
               preload
@@ -49,7 +52,7 @@ export default function Home() {
               className="hero-img hero-img-light"
             />
             <Image
-              src="/hero-dark.jpg"
+              src={heroDark}
               alt=""
               fill
               sizes="(max-width: 860px) 100vw, 65vw"
